@@ -1,0 +1,599 @@
+        :root {
+            --neon-blue: #0ff0fc;
+            --neon-purple: #8a2be2;
+            --neon-pink: #ff00ff;
+            --dark-bg: #0d0d15;
+            --darker-bg: #05050a;
+            --light: #ffffff;
+            --accent: #ff4655;
+            --glow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-purple);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: var(--darker-bg);
+            color: var(--light);
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, .cta-button, .footer-logo {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* **Header Gamer - Responsivo** */
+        header {
+            background: linear-gradient(rgba(13, 13, 21, 0.9), rgba(5, 5, 10, 0.9)), 
+                        url('https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80') no-repeat center/cover;
+            position: relative;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--neon-purple);
+            box-shadow: var(--glow);
+        }
+        
+        .login-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px var(--accent);
+            z-index: 100;
+        }
+        
+        .login-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 20px var(--accent);
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 2;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            margin-bottom: 20px;
+            color: var(--neon-blue);
+            text-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-purple);
+            letter-spacing: 2px;
+        }
+        
+        .subheadline {
+            font-size: clamp(1rem, 3vw, 1.3rem);
+            max-width: 800px;
+            margin: 0 auto 40px;
+            color: rgba(255, 255, 255, 0.9);
+            padding: 0 15px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--neon-purple), var(--neon-blue));
+            color: white;
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: clamp(0.9rem, 3vw, 1.1rem);
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px var(--neon-blue);
+            border: 1px solid var(--neon-blue);
+            animation: pulse 2s infinite;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 25px var(--neon-blue);
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 15px var(--neon-blue); }
+            50% { box-shadow: 0 0 25px var(--neon-blue); }
+            100% { box-shadow: 0 0 15px var(--neon-blue); }
+        }
+        
+        /* **Seções Gamer - Responsivas** */
+        section {
+            padding: 60px 0;
+            background-color: var(--dark-bg);
+            border-bottom: 1px solid rgba(138, 43, 226, 0.3);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            color: var(--neon-blue);
+            text-shadow: 0 0 10px var(--neon-blue);
+            position: relative;
+            padding: 0 15px;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--neon-purple), var(--neon-blue));
+            margin: 15px auto 0;
+            border-radius: 3px;
+        }
+        
+        /* **Benefícios Gamer - Responsivo** */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 0 10px;
+        }
+        
+        .benefit {
+            background: rgba(20, 20, 40, 0.7);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid var(--neon-purple);
+            box-shadow: 0 0 15px rgba(138, 43, 226, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .benefit:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 25px var(--neon-purple);
+        }
+        
+        .benefit-icon {
+            font-size: 2.5rem;
+            color: var(--neon-blue);
+            margin-bottom: 15px;
+            text-shadow: 0 0 10px var(--neon-blue);
+        }
+        
+        .benefit h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--neon-blue);
+        }
+        
+        .benefit p {
+            font-size: 0.95rem;
+        }
+        
+        /* **Passo a Passo Gamer - Responsivo** */
+        .steps {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .step {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            background: rgba(20, 20, 40, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid var(--neon-purple);
+            box-shadow: 0 0 15px rgba(138, 43, 226, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .step::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--neon-purple), var(--neon-blue));
+        }
+        
+        .step-number {
+            background: var(--dark-bg);
+            color: var(--neon-blue);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border: 2px solid var(--neon-blue);
+            box-shadow: 0 0 10px var(--neon-blue);
+            flex-shrink: 0;
+        }
+        
+        .step-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+            color: var(--neon-blue);
+        }
+        
+        .step-content p {
+            font-size: 0.95rem;
+        }
+        
+        /* **Depoimentos Gamer - Responsivo** */
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 0 15px;
+        }
+        
+        .testimonial {
+            background: rgba(20, 20, 40, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid var(--neon-purple);
+            box-shadow: 0 0 15px rgba(138, 43, 226, 0.3);
+            position: relative;
+        }
+        
+        .testimonial::before {
+            content: '"';
+            font-size: 4rem;
+            color: rgba(0, 255, 252, 0.1);
+            position: absolute;
+            top: 5px;
+            left: 15px;
+            line-height: 1;
+        }
+        
+        .testimonial p {
+            font-style: italic;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+            font-size: 0.95rem;
+        }
+        
+        .testimonial cite {
+            display: flex;
+            align-items: center;
+            font-style: normal;
+            font-weight: bold;
+            color: var(--neon-blue);
+            font-size: 0.9rem;
+        }
+        
+        .testimonial cite::before {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 2px;
+            background: var(--neon-blue);
+            margin-right: 8px;
+        }
+        
+        /* **Planos Gamer - Responsivo** */
+        .pricing-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        .pricing-plan {
+            background: rgba(20, 20, 40, 0.7);
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+            border: 1px solid var(--neon-purple);
+            box-shadow: 0 0 15px rgba(138, 43, 226, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .pricing-plan.premium {
+            border: 2px solid var(--neon-blue);
+            box-shadow: 0 0 25px var(--neon-blue);
+        }
+        
+        .pricing-plan.premium::before {
+            content: 'MAIS POPULAR';
+            position: absolute;
+            top: 12px;
+            right: -35px;
+            background: var(--accent);
+            color: white;
+            padding: 4px 35px;
+            transform: rotate(45deg);
+            font-size: 0.7rem;
+            font-weight: bold;
+            font-family: 'Orbitron', sans-serif;
+        }
+        
+        .pricing-plan h3 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+            color: var(--neon-blue);
+        }
+        
+        .price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: var(--neon-blue);
+            display: block;
+            text-shadow: 0 0 10px var(--neon-blue);
+        }
+        
+        .price::before {
+            content: 'R$';
+            font-size: 1.2rem;
+            vertical-align: super;
+            margin-right: 5px;
+        }
+        
+        .pricing-plan ul {
+            list-style: none;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        
+        .pricing-plan ul li {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(138, 43, 226, 0.3);
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+        }
+        
+        .pricing-plan ul li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--neon-blue);
+            margin-right: 8px;
+            font-size: 0.9rem;
+        }
+        
+        .pricing-plan .cta-button {
+            width: 100%;
+            display: block;
+            padding: 12px;
+            border-radius: 5px;
+            margin-top: 15px;
+            font-size: 0.9rem;
+        }
+        
+        /* **Formulário Gamer - Responsivo** */
+        .lead-form {
+            max-width: 500px;
+            margin: 0 auto;
+            background: rgba(20, 20, 40, 0.7);
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid var(--neon-purple);
+            box-shadow: 0 0 20px rgba(138, 43, 226, 0.3);
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 500;
+            color: var(--neon-blue);
+            font-size: 0.9rem;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--neon-purple);
+            border-radius: 5px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            color: white;
+        }
+        
+        .form-group input:focus {
+            border-color: var(--neon-blue);
+            outline: none;
+            box-shadow: 0 0 15px var(--neon-blue);
+        }
+        
+        .form-group input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+        
+        .submit-btn {
+            background: linear-gradient(45deg, var(--neon-purple), var(--neon-blue));
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+            font-family: 'Orbitron', sans-serif;
+            box-shadow: 0 0 15px var(--neon-blue);
+            border: 1px solid var(--neon-blue);
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 25px var(--neon-blue);
+        }
+        
+        .guarantee {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        /* **Footer Gamer - Responsivo** */
+        footer {
+            background: var(--darker-bg);
+            color: white;
+            padding: 40px 0 20px;
+            border-top: 1px solid var(--neon-purple);
+            box-shadow: 0 -5px 15px rgba(138, 43, 226, 0.2);
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: var(--neon-blue);
+            text-shadow: 0 0 10px var(--neon-blue);
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            text-align: center;
+        }
+        
+        .footer-links h4 {
+            color: var(--neon-blue);
+            margin-bottom: 10px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.1rem;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+        
+        .footer-links a:hover {
+            color: var(--neon-blue);
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .social-links a {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.3rem;
+            transition: color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--neon-blue);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(138, 43, 226, 0.3);
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        /* **Media Queries para Dispositivos Específicos** */
+        @media (min-width: 600px) {
+            .footer-content {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            
+            .footer-links {
+                text-align: left;
+            }
+            
+            .footer-logo {
+                text-align: left;
+            }
+            
+            .social-links {
+                justify-content: flex-start;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .benefits-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 30px;
+            }
+            
+            .steps {
+                gap: 25px;
+            }
+            
+            .step {
+                padding: 25px;
+            }
+            
+            .pricing-options {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 25px;
+            }
+            
+            .lead-form {
+                padding: 30px;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .footer-content {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+            
+            .footer-links {
+                flex-direction: row;
+                gap: 40px;
+            }
+        }

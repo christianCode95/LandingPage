@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domine a Unity | Curso de Jogos 3D</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Press+Start+2P&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+</head>
+
+<body>
+    <header>
+        <button class="login-btn" onclick="IrParaInscricao()">Login</button>
+        <div class="container">
+            <div class="header-content">
+                <h1>Domine a Unity e Crie Jogos 3D Incríveis</h1>
+                <p class="subheadline">Do zero à publicação na Steam! Aprenda tudo sobre Unity, desde o básico até
+                    técnicas avançadas de animação, programação e publicação.</p>
+                <a href="#pricing-section" class="cta-button">Comece Agora por R$15,90</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="benefits-section">
+        <div class="container">
+            <h2 class="section-title">Por Que Nosso Curso?</h2>
+            <div class="benefits-grid">
+                <div class="benefit">
+                    <div class="benefit-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <h3>Preço Acessível</h3>
+                    <p>O curso mais completo de Unity 3D com o melhor custo-benefício. Planos acessíveis para todos os
+                        níveis.</p>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3>Aprendizado Prático</h3>
+                    <p>Domine a Unity criando jogos reais. Aprenda movimentação, animação, IA de inimigos e muito mais.
+                    </p>
+                </div>
+                <div class="benefit">
+                    <div class="benefit-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Certificado Reconhecido</h3>
+                    <p>Receba um certificado ao concluir e aumente suas chances no mercado de desenvolvimento de jogos.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works-section">
+        <div class="container">
+            <h2 class="section-title">Como Funciona</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Crie Sua Conta</h3>
+                        <p>Registre-se gratuitamente e acesse nossa plataforma.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Escolha Seu Plano</h3>
+                        <p>Selecione entre Básico ou Premium com suporte exclusivo.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Comece a Aprender</h3>
+                        <p>Acesso imediato após o pagamento via PIX, cartão ou boleto.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="social-proof-section">
+        <div class="container">
+            <h2 class="section-title">O Que Dizem Nossos Alunos</h2>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <p>"Transformou minha carreira! Em 3 meses já estava trabalhando em um estúdio de jogos. O conteúdo
+                        é excepcional!"</p>
+                    <cite>Angela Ubenia</cite>
+                </div>
+                <div class="testimonial">
+                    <p>"Nunca imaginei que poderia criar meu próprio jogo. Agora estou finalizando meu projeto para a
+                        Steam!"</p>
+                    <cite>Gabriel Oliveira</cite>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing-section">
+        <div class="container">
+            <h2 class="section-title">Escolha Seu Plano</h2>
+            <div class="pricing-options">
+                <div class="pricing-plan">
+                    <h3>Básico</h3>
+                    <span class="price">15,90</span>
+                    <ul>
+                        <li>Acesso a todas as vídeo-aulas</li>
+                        <li>Projetos práticos</li>
+                        <li>Certificado de conclusão</li>
+                        <li>Atualizações gratuitas</li>
+                    </ul>
+                    <a href="#call-to-action" class="cta-button" onclick="SelecionarPlano('Básico')">Quero o Básico</a>
+                </div>
+                <div class="pricing-plan premium">
+                    <h3>Premium</h3>
+                    <span class="price">28,50</span>
+                    <ul>
+                        <li>Todos os benefícios do Básico</li>
+                        <li>Suporte via IA 24/7</li>
+                        <li>Exercícios exclusivos</li>
+                        <li>Feedback nos projetos</li>
+                        <li>Comunidade VIP</li>
+                    </ul>
+                    <a href="#call-to-action" class="cta-button" onclick="SelecionarPlano('Premium')">Quero o
+                        Premium</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="call-to-action">
+        <div class="container">
+            <h2 class="section-title">Pronto para Começar?</h2>
+            <p style="text-align: center; margin-bottom: 30px; font-size: 1.1rem; color: rgba(255, 255, 255, 0.8);">
+                Preencha o formulário e inicie sua jornada!</p>
+
+            <form class="lead-form" id="formInscricao">
+                <div class="form-group">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" required>
+                </div>
+                <button type="button" class="submit-btn" onclick="FazerLogin()">Quero Me Inscrever Agora</button>
+                <p class="guarantee">Garantia de 7 dias ou seu dinheiro de volta</p>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <div class="footer-logo">UNITY<span style="color: var(--neon-purple);">MASTERS</span></div>
+                    <p style="color: rgba(255, 255, 255, 0.6);">Transformando sonhos em jogos desde 2023</p>
+                </div>
+                <div class="footer-links">
+                    <div>
+                        <h4>Links</h4>
+                        <a href="#">Sobre Nós</a>
+                        <a href="#">Contato</a>
+                        <a href="#">Blog</a>
+                    </div>
+                    <div>
+                        <h4>Legal</h4>
+                        <a href="#">Termos de Uso</a>
+                        <a href="#">Política de Privacidade</a>
+                        <a href="#">FAQ</a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Redes Sociais</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2025 UnityMasters. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
